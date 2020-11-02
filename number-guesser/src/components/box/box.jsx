@@ -23,7 +23,7 @@ const How = (props) => {
 
 const Box = (props) => {
 
-    const { how, play, rank } = props
+    const { how, rank } = props
 
     const [ title, setTitle ] = useState('')
 

@@ -200,7 +200,7 @@ const Game = (props) => {
                 <div>
                     <input type="text" className="form-control" placeholder="Enter your name"
                         onChange={ (event) => setName(event.target.value)}></input>
-                    <button type="button" class="btn btn-outline-dark btn-lg btn-block start-button"
+                    <button type="button" className="btn btn-outline-dark btn-lg btn-block start-button"
                         onClick={startGame}>Start Game</button>
                 </div>
             )

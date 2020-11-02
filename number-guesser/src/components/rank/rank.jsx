@@ -23,10 +23,10 @@ const GetButton = (props) => {
 
     return (
         <Fragment>
-            <input type="text" class="form-control" aria-describedby="emailHelp"
+            <input type="text" className="form-control" aria-describedby="emailHelp"
             placeholder="Enter a number" onChange={ (event) => setTop(event.target.value)}></input>
-            <small id="emailHelp" class="form-text text-muted">Get the n best matches.</small>
-            <button type="button" class="btn btn-dark button"
+            <small id="emailHelp" className="form-text text-muted">Get the n best matches.</small>
+            <button type="button" className="btn btn-dark button"
                         onClick={queryMatches}>Get</button>
         </Fragment>
     )
@@ -37,13 +37,19 @@ const Rank = (props) => {
     const [matches, setMatches] =  useState([])
     const [top, setTop] = useState(defultTopRank)
 
-    useEffect( async ()=> {
-        props.setTitle(rankTitle)
-        
-        const url = `rank/?page_size=${top}`
-        const result = await api.get(url)
+    useEffect ( () => {
+        const fetchData = async () => {
+            const url = `rank/?page_size=${top}`
+            const result = await api.get(url)
 
-        await setMatches(result.data.all_ranks)
+            await setMatches(result.data.all_ranks)
+        }
+
+        fetchData()
+    }, [props, top])
+
+    useEffect( ()=> {
+        props.setTitle(rankTitle)
     })
 
     const getMatches = (matches) => {
@@ -75,7 +81,7 @@ const Rank = (props) => {
                 </tbody>
             </table>
             <form>
-                <div class="form-row align-items-center">
+                <div className="form-row align-items-center">
                     <GetButton setTop={setTop}></GetButton>
                 </div>
             </form>

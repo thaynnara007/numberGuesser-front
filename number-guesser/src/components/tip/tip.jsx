@@ -11,7 +11,7 @@ const Tip = (props) => {
             <p className='explanation'>{props.explanation}</p>
             <input type="text" className="form-control" placeholder="Enter the number"
                 onChange={ (event) => props.setInput(event.target.value)}></input>
-            <button type="button" class="btn btn-outline-dark btn-lg btn-block start-button"
+            <button type="button" className="btn btn-outline-dark btn-lg btn-block start-button"
                 onClick={props.filter}>filter</button>
         </details>
     )

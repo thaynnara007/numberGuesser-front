@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import Navbar from './components/navbar/navbar'
-import Box from './components/box/box'
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
