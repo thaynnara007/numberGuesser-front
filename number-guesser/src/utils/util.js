@@ -23,5 +23,5 @@ module.exports = {
     normalizeName,
     toBlankSpace,
     randomNumberBetween,
-    validateNumber 
+    validateNumber,
 }

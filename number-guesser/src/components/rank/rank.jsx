@@ -64,10 +64,10 @@ const Rank = (props) => {
                 <thead className="thead-dark">
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Tempo</th>
-                    <th scope="col">Tentativas</th>
-                    <th scope="col">Número</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Attempts</th>
+                    <th scope="col">Number</th>
                 </tr>
                 </thead>
                 <tbody>
