@@ -26,10 +26,7 @@ $ Runing on http://localhost:3000
 
 ```shell
 "react": "^16.13.1"
-```
-```shell
 "bootstrap": "^4.5.2"
-```
-```shell
+"moment": "^2.29.1"
 "axios": "^0.21.0"
 ```
