@@ -5,7 +5,9 @@ import Tip from '../tip/tip'
 import { 
     gameTitle,
     matchTitle,
-    tipSumExplanation
+    tipSumExplanation,
+    tipModExplanation,
+    tipMultiExplanation
 } from '../../utils/constants'
 
 import './game.css'
@@ -235,9 +237,9 @@ const Game = (props) => {
                     </div>
                     <Tip title={"Sum Tip"} explanation={tipSumExplanation} 
                         setInput={setSum} filter={onSumFilter}></Tip>
-                    <Tip title={"Mod Tip"} explanation={tipSumExplanation} 
+                    <Tip title={"Mod Tip"} explanation={tipModExplanation} 
                         setInput={setMod} filter={onModFilter}></Tip>
-                    <Tip title={"Multi Tip"} explanation={tipSumExplanation} 
+                    <Tip title={"Multi Tip"} explanation={tipMultiExplanation} 
                         setInput={setMult} filter={onMultiFilter}></Tip>
                 </Fragment>
             )
