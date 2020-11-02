@@ -107,19 +107,23 @@ const Game = (props) => {
 
         if (validated){
             if (!pressedSum) {
+                const primesList = primes.slice(minIndex, maxIndex + 1)
+
                 const url = 'primes/?filter=sum'
                 const body = {
                     num: sum,
-                    primes
+                    primes: primesList
                 }
 
                 const newPrimes = await api.post(url, body)
                 const newMaxIndex = newPrimes.data.size - 1
+                const newMinIndex = 0
 
                 await setPrimes(newPrimes.data.primes)
                 await setMaxIndex(newMaxIndex)
+                await setMinIndex(newMinIndex)
 
-                const randomIndex = util.randomNumberBetween(minIndex, newMaxIndex)
+                const randomIndex = util.randomNumberBetween(newMinIndex, newMaxIndex)
 
                 setGuess(randomIndex)
                 setPressedSum(true)
@@ -133,19 +137,23 @@ const Game = (props) => {
 
         if (validated){
             if (!pressedMod) {
+                const primesList = primes.slice(minIndex, maxIndex + 1)
+
                 const url = 'primes/?filter=mod'
                 const body = {
                     num: mod,
-                    primes
+                    primes: primesList
                 }
 
                 const newPrimes = await api.post(url, body)
                 const newMaxIndex = newPrimes.data.size - 1
+                const newMinIndex = 0
 
                 await setPrimes(newPrimes.data.primes)
                 await setMaxIndex(newMaxIndex)
+                await setMinIndex(newMinIndex)
 
-                const randomIndex = util.randomNumberBetween(minIndex, newMaxIndex)
+                const randomIndex = util.randomNumberBetween(newMinIndex, newMaxIndex)
 
                 setGuess(randomIndex)
                 setPressedMod(true)
@@ -159,19 +167,23 @@ const Game = (props) => {
 
         if (validated){
             if(!pressedMulti) {
+                const primesList = primes.slice(minIndex, maxIndex + 1)
+
                 const url = 'primes/?filter=multi'
                 const body = {
                     num: multi,
-                    primes
+                    primes: primesList
                 }
 
                 const newPrimes = await api.post(url, body)
                 const newMaxIndex = newPrimes.data.size - 1
+                const newMinIndex = 0
 
                 await setPrimes(newPrimes.data.primes)
                 await setMaxIndex(newMaxIndex)
+                await setMinIndex(newMinIndex)
 
-                const randomIndex = util.randomNumberBetween(minIndex, newMaxIndex)
+                const randomIndex = util.randomNumberBetween(newMinIndex, newMaxIndex)
 
                 setGuess(randomIndex)
                 setPressedMulti(true)
