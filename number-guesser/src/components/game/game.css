@@ -1,0 +1,12 @@
+.start-button {
+    margin-top: 1em;
+}
+
+.guess-buttons {
+    margin-left: 0.1em;
+    padding: 0.5em 3em !important;
+}
+
+.bigger-button {
+    padding: 0.5em 2.3em !important;
+}

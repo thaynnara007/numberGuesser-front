@@ -1,0 +1,9 @@
+.box-size {
+    margin-top: 8em;
+    width: 45% !important;
+}
+
+.title {
+    background-color: teal;
+    color: whitesmoke;
+}

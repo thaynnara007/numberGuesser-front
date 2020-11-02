@@ -1,0 +1,26 @@
+.box-shadow-default {
+    box-shadow: 3px 0px 8px #3a4741;
+}
+
+.box-shadow-click {
+    box-shadow: 10px 10px 8px #3a4741;
+}
+
+.navbar-color-default {
+    background-color: teal;
+}
+
+.item-default {
+    font-weight: bold;
+    color: whitesmoke;
+}
+
+.box-shadow-default:hover {
+    background-color: #69927f;
+}
+
+.item-default:hover {
+    color: whitesmoke;
+}
+
+

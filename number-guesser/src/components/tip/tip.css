@@ -1,0 +1,18 @@
+.title-space {
+    margin-top: 2em;
+}
+
+.title-tip{
+    padding-top: 0.2em !important;
+    padding-bottom: 0.1em !important;
+    background-color: cadetblue;
+}
+
+.title-font {
+    font-size: 1.4em;
+    color: whitesmoke;
+}
+
+.explanation {
+    font-size: 1.2em;
+}
