@@ -194,6 +194,11 @@ const Game = (props) => {
         }
     }
 
+    const onPlayAgain = () => {
+        setInfoPart(true)
+        setMatchInfo(false)
+    }
+
     const content = () => {
         if (infoPart) {
             return (
@@ -207,21 +212,25 @@ const Game = (props) => {
         }
         else if (matchInfo) {
             return(
-                <table className="table table-hover text-monospace">
-                    <thead className="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Tempo</th>
-                        <th scope="col">Tentativas</th>
-                        <th scope="col">Número</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                        <Match index={'0'} name={name} time={gameTime} attempts={attempts}
-                        numberGuessed={primes[guess]}></Match>
-                    </tbody>
-                </table>
+                <Fragment>
+                    <table className="table table-hover text-monospace">
+                        <thead className="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Tempo</th>
+                            <th scope="col">Tentativas</th>
+                            <th scope="col">Número</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <Match index={'0'} name={name} time={gameTime} attempts={attempts}
+                            numberGuessed={primes[guess]}></Match>
+                        </tbody>
+                    </table>
+                    <button type="button" className="btn btn-outline-dark btn-lg btn-block start-button"
+                        onClick={onPlayAgain}>Play again</button>
+                </Fragment>
             )
         }
         else {
